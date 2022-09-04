@@ -1,0 +1,28 @@
+.note-overview {
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  padding: 30px 0px;
+  margin: 30px 0px;
+}
+.overview-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.font-style {
+  font-family: "SF Pro Display";
+}
+
+.key {
+  color: rgba(0, 0, 0, 0, 0.6);
+  font-size: 13px;
+  line-height: 17px;
+  font-family: "SF Pro Display";
+  font-weight: 300;
+  padding-right: 40px;
+}
+
+.col-space {
+  padding-bottom: 20px;
+}

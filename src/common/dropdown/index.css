@@ -1,0 +1,20 @@
+.dropdown-select {
+  position: relative;
+  appearance: none;
+  background-color: blue;
+}
+
+.dropdown-select::after {
+  content: "\25b6";
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.dropdown-option {
+  font-family: "Open Sans";
+  font-size: 11px;
+  line-height: 15px;
+  color: rgb(0, 0, 0, 0.87);
+  font-weight: 600;
+}

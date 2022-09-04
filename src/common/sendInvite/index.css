@@ -1,0 +1,52 @@
+.send-invite{
+    display: inline-flex;
+    margin-right:0.5rem ;
+    /* padding: 16px 12px; */
+}
+
+.send-invite input{
+    background-color: #F0F5FA;
+    border: 1px solid #ADADBE; /* Green background */
+ /* Green border */
+    color: black; /* White text */
+    padding: 10px 16px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left;
+    border-right: 0px;
+    border-radius: 3px;
+}
+
+
+.send-invite input:focus{
+    outline: none;
+}
+
+.send-invite select{
+    background-color: #F0F5FA;
+    /* White text */
+    padding: 10px 16px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left;  
+    border: 0px;
+    
+    border-radius: 3px;
+    font-family: "Open Sans";
+    font-size: 11px;
+    line-height: 15px;
+    font-weight: 600;
+    box-sizing: content-box;
+}
+.send-invite:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .select-wrapper{
+    background-color: #F0F5FA;
+    border: 1px solid #ADADBE; 
+    padding-right: 12px;
+    margin-left: -3px;
+    border-radius: 2px;
+    border-left: 0px;
+  }

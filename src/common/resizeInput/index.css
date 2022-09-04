@@ -1,0 +1,24 @@
+.resize-input{
+    display: inline-flex;
+    margin-right:0.5rem ;
+    /* padding: 16px 12px; */
+}
+
+.resize-input{
+    background-color: #F0F5FA;
+    min-width: 250px;
+    border: 1px solid #ADADBE; /* Green background */
+    color: black; /* White text */
+    padding: 12px 0px; /* Some padding */
+    padding-left: 12px;
+    cursor: pointer; /* Pointer/hand icon */
+    float: left;
+    border-radius: 3px;
+    text-overflow: ellipsis;
+}
+
+.resize-input:after {
+    content: "";
+    clear: both;
+    display: table;
+  }

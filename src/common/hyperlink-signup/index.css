@@ -1,0 +1,12 @@
+.hyperlink-main2{
+    color: black;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19px;
+    font-family: "Open Sans";
+    text-decoration: underline;
+}
+
+.hyperlink-main2:hover {
+    cursor: pointer;
+}

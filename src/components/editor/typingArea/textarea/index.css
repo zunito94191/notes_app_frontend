@@ -1,0 +1,19 @@
+.text-area{
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "SF Pro Display";
+    line-height: 24px;
+    width: 100%;
+    min-height: 400px;
+    color: #2C2731;
+    border: none;
+    resize: none;
+    overflow: hidden;
+}
+
+.text-area:disabled{
+    background-color: inherit;
+}
+.text-area:focus{
+    outline: none;
+}

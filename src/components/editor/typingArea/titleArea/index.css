@@ -1,0 +1,17 @@
+.title-area{
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 42px;
+    font-family: "SF Pro Display";
+    color: black;
+    border: none;
+    width:100%;
+}
+.title-area:disabled{
+    background-color: inherit;
+}
+
+.title-area:focus{
+    outline: none;
+}
+

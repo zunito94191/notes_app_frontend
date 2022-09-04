@@ -1,0 +1,38 @@
+.modal-content-signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 90px;
+    padding-bottom: 70px;
+}
+
+.signup-title {
+    font-size: 23px;
+    font-weight: bold;
+    font-family: "Open Sans";
+}
+
+.padding-bottom-20 {
+    padding-bottom: 20px;
+}
+
+.padding-bottom-10 {
+    padding-bottom: 10px;
+}   
+
+.width-100 {
+    width: 100%;
+}
+
+.padding-top-20 {
+    padding-top: 20px;
+}
+
+.error-mssg {
+    color: #ff0000;
+}
+
+.font-size-20 {
+    font-size: 20px;
+    font-weight: 800;
+}

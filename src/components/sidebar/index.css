@@ -1,0 +1,15 @@
+.sidebar-main{
+    flex: 3;
+    width: 30vw;
+    height: 92vh;
+    border-right: 1px solid #efefef;
+    
+}
+.sidebar-main .note-display{
+    overflow-y:scroll;
+    height: 83vh;
+}
+
+.mobile-main-view {
+    
+}

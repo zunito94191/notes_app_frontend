@@ -1,0 +1,22 @@
+.collab-box {
+  display: flex;
+  flex-direction: column;
+  
+}
+.collab-box > * {
+  padding: 16px;
+}
+.send-invite-button > * {
+  padding: 9px;
+  border-radius: 2px;
+}
+
+.border-invite {
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.bottom-invite {
+  padding: 0px;
+  border-bottom: 1px solid #d9d9d9;
+}

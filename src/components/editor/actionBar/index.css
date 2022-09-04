@@ -1,0 +1,31 @@
+.action-bar {
+  background-color: #eaeaea;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  height: 0px;
+
+}
+
+.action-bar-left {
+  color: black;
+  font-weight: 600;
+  font-family: "SF Pro Display";
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.right {
+  flex-direction: row;
+  margin: 0%;
+}
+
+.action:hover {
+  cursor: pointer;
+}
+
+.spacing {
+  margin-left: 20px;
+}

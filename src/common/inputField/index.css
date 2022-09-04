@@ -1,0 +1,17 @@
+.input-field1{
+    background-color: #F0F5FA;
+    border: 1px solid #ADADBE;
+    color: rgba(0, 0, 0, 0.87);
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 7px 16px;
+    border-radius: 5px;
+    width: 300px;
+}
+
+::placeholder {
+    color: #000;
+    font-weight: 600;
+}
