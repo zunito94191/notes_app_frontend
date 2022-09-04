@@ -2,7 +2,8 @@ import "./index.css";
 import Header from "./header";
 import Item from "./item";
 import React from "react";
-import { PropType } from "../../common/types";
+import {  PropType } from "../../common/types";
+
 
 export default function Sidebar({
   notes,
@@ -11,7 +12,7 @@ export default function Sidebar({
   addNote,
   removeNote,
   updateNote,
-}: PropType) {
+}: PropType ) {
   const monthNames = [
     "January",
     "February",

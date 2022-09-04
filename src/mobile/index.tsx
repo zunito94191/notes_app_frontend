@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Sidebar from '../components/sidebar'
-import { NotePropType, PropType } from '../common/types'
+import {  AuthLogout, NotePropType, PropType } from '../common/types'
 import Editor from '../components/editor'
 
 export default function Mobile({
@@ -10,8 +10,9 @@ export default function Mobile({
     addNote,
     removeNote,
     updateNote,
-    note
-  }: PropType & NotePropType) {
+    note,
+    logout
+  }: PropType & NotePropType & AuthLogout) {
     const [showSidebar, setShowSidebar] = useState(true);
 
     const selectNote = ()=>{
@@ -29,7 +30,7 @@ export default function Mobile({
         updateNote={updateNote}/>
     </div>
   }
-    {!showSidebar && <Editor note={note} setValue={setShowSidebar}/>}
+    {!showSidebar && <Editor note={note} logout={logout}setValue={setShowSidebar}/>}
     
     </>
     

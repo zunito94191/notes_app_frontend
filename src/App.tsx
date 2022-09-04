@@ -142,7 +142,7 @@ function App() {
   };
   const width = window.innerWidth;
   return width < 768 ? <div className="home-page">
-    <Header />
+    <Header logout={logout} />
     <NoteContext.Provider value={updateActiveNote}>
     <Mobile notes={notes}
   setActiveNote={setSelectedNote}
@@ -151,11 +151,12 @@ function App() {
   removeNote={removeNote}
   updateNote={updateNote}
   note={activeNote} 
+  logout={logout}
   />
   </NoteContext.Provider>
   </div> : (
       <div className="home-page">
-        <Header />
+        <Header logout={logout}/>
 
         <div className="page-divided">
           <Sidebar
@@ -167,7 +168,7 @@ function App() {
             updateNote={updateNote}
           />
           <NoteContext.Provider value={updateActiveNote}>
-          <Editor note={activeNote} setValue={()=>{}}/>
+          <Editor note={activeNote} logout={logout}setValue={()=>{}}/>
           </NoteContext.Provider>
         </div>
         {!userID &&

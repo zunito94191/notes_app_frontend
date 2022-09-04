@@ -80,6 +80,9 @@ export interface authResponse {
 export interface AuthFunctionType {
   (): void;
 }
+export interface AuthLogout{
+  logout:AuthFunctionType
+}
 
 export interface ButtonPropType {
   label: string;

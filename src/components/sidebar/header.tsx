@@ -1,13 +1,13 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { NoteType, SidebarHeaderProps } from "../../common/types";
+import {  NoteType, SidebarHeaderProps } from "../../common/types";
 import "./header.css";
 
 export default function Header({
   addNote,
   removeNote,
-  updateNote,
-}: SidebarHeaderProps) {
+  updateNote
+}: SidebarHeaderProps ) {
   const [tapped, setTapped] = useState(0);
   const note: NoteType = {
     id: new Date().getTime(),
@@ -20,7 +20,7 @@ export default function Header({
   };
 
   useEffect(() => {
-    if (tapped != 0){
+    if (tapped !== 0){
       console.log("creating new note..", note.id)
       createNote();
     } 

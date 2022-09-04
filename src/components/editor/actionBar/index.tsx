@@ -4,7 +4,7 @@ import more from "../../../assets/Icons-24px-More_horizontal.png";
 import ShareAsUrl from "./share";
 import "./index.css";
 import React from "react";
-import { NotePropType, SelectType } from "../../../common/types";
+import { NotePropType } from "../../../common/types";
 import AddCollaborator from "./addCollaborator";
 
 const ActionBar = ({ note }: NotePropType) => {
@@ -33,10 +33,11 @@ const ActionBar = ({ note }: NotePropType) => {
             if(!note.readOnly)setCollab(2);
           }}
         />
-        <img src={more} className="action spacing" alt="More" />
+        <img src={more} className="action spacing" alt="More"/>
       </div>
       {collab === 1 && <AddCollaborator note={note} setValue={setCollab} />}
       {collab === 2 && <ShareAsUrl note={note} setValue={setCollab} />}
+    
     </div>
   );
 };
