@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction } from "react";
+import React, { Dispatch, ElementType, MutableRefObject, SetStateAction } from "react";
 
 export interface CollabType {
   role?: string;
@@ -37,7 +37,14 @@ export interface PropType {
   removeNote: AuthFunctionType;
   updateNote: UpdateIdType;
 }
-
+// export interface MobileType {
+//   notes: NoteType[];
+//   setActiveNote: NoteFunctionType;
+//   activeIndex: MutableRefObject;
+//   addNote: NoteFunctionType;
+//   removeNote: AuthFunctionType;
+//   updateNote: UpdateIdType;
+// }
 export interface UpdateIdType {
   (noteId: number): void;
 }

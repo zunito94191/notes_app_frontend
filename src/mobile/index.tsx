@@ -13,11 +13,13 @@ export default function Mobile({
     note,
     logout
   }: PropType & NotePropType & AuthLogout) {
+
     const [showSidebar, setShowSidebar] = useState(true);
 
     const selectNote = ()=>{
         setShowSidebar(false);
     }
+    
   return (
     <>
     {showSidebar && 
@@ -28,9 +30,10 @@ export default function Mobile({
         addNote={addNote}
         removeNote={removeNote}
         updateNote={updateNote}/>
+        
     </div>
   }
-    {!showSidebar && <Editor note={note} logout={logout}setValue={setShowSidebar}/>}
+    {!showSidebar && <Editor note={note} logout={logout} setValue={setShowSidebar}/>}
     
     </>
     

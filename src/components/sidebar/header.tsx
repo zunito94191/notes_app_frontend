@@ -26,8 +26,11 @@ export default function Header({
     } 
   }, [tapped]);
 
-  const btnHandler = () => {
+  const btnHandler = ( e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.stopPropagation();
+    console.log("------------------------");
     addNote(note);
+    console.log("why not creating note")
     setTapped(prev=>prev+1);
   };
   const createNote = async () => {

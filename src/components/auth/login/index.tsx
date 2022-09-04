@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Button from "../../../common/button";
 import HyperLinkText from "../../../common/hyperlink";
@@ -9,8 +9,9 @@ import Spinner from "../../../common/spinner";
 import { authResponse, authType } from "../../../common/types";
 import ForgotPassword from "./forgotPassword";
 import GoogleLogin from "./googleLogin/googleLogin";
-import { signWithGoogle } from "../../../firebase";
+import { signWithGoogle, getLoginResult } from "../../../firebase";
 import "./index.css";
+import { UserCredential } from "firebase/auth";
 
 const Login = ({ setAuthType, setUserID }: authType) =>  {
   const [email, setEmail] = useState("");
@@ -51,29 +52,48 @@ const Login = ({ setAuthType, setUserID }: authType) =>  {
 
   };
 
+  useEffect(()=>{
+    if(window.innerWidth <=768)
+      googleRedirectResult();
+  },[]);
+
+  const googleRedirectResult= async()=>{
+    try{
+    const res = await getLoginResult();
+    console.log("getting redirected res", res)
+    console.log(" nkvdnvkd");
+    if(res){
+      setGoogleLoginData(res);
+    }}catch(e){}
+  }
+
   const googleLogin = async () => {
     try {
+      console.log("---ddd---")
       const res = await signWithGoogle();
-      setSpinner((prev) => !prev);
-      const { data, status } = await axios.post<authResponse>(
-        `${process.env.REACT_APP_ENDPOINT}/v1/api/user/login`,
-        {
-          email: res.user.email,
-          name: res.user.displayName,
-          photo: res.user.photoURL,
-          isGoogle: true,
-        }
-      );
-      setSpinner((prev) => !prev);
-      if (status === 200) {
-        setUserID(data.token);
-        localStorage.setItem("jwt", data.token);
-        localStorage.setItem("user", JSON.stringify(data.user));
-      }
-
+      setGoogleLoginData(res);
       // if(res.user.email)
     } catch (e) {}
   };
+
+  const setGoogleLoginData =  async(res:UserCredential) => {
+    setSpinner((prev) => !prev);
+    const { data, status } = await axios.post<authResponse>(
+      `${process.env.REACT_APP_ENDPOINT}/v1/api/user/login`,
+      {
+        email: res.user.email,
+        name: res.user.displayName,
+        photo: res.user.photoURL,
+        isGoogle: true,
+      }
+    );
+    setSpinner((prev) => !prev);
+    if (status === 200) {
+      setUserID(data.token);
+      localStorage.setItem("jwt", data.token);
+      localStorage.setItem("user", JSON.stringify(data.user));
+    }
+  }
 
   return (
     <Modal>
