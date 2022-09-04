@@ -154,6 +154,18 @@ function App() {
   logout={logout}
   />
   </NoteContext.Provider>
+  {!userID &&
+          (authType === "login" ? (
+            <Login
+              setAuthType={setAuthType}
+              setUserID={setUserID}
+            />
+          ) : (
+            <SignUp
+              setAuthType={setAuthType}
+              setUserID={setUserID}
+            />
+          ))}
   </div> : (
       <div className="home-page">
         <Header logout={logout}/>
